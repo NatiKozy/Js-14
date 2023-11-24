@@ -1,17 +1,17 @@
 //Задание 1
 //Создайте массив myFirstArray содержащий строки, числа, булевы значения. Выведите его в консоль.
 const myFirstArray = ['string', 2, true];
-console.log(myFirstArray);
+console.log('Задание 1', myFirstArray);
 
 //Задание 2
 //Создайте массив mySecondArray, заполните его любыми значениями. Выведите длину массива.
 const mySecondArray = ['day', 'way', 'pay'];
-console.log(mySecondArray.length);
+console.log('Задание 2', mySecondArray.length);
 
 //Задание 3
 //Создайте массив myInformation, который содержит ваше имя, день рождения, месяц рождения и знак зодиака. Выведите массив в консоль, разделяя элементы пробелами. Вам понадобится метод join().
 const myInformation = ['Наталья', '10', '10', 'весы'];
-console.log(myInformation.join(' '));
+console.log('Задание 3', myInformation.join(' '));
 
 //Задание 4
 //Добавьте в массив countries значения 'Italy' с индексом 5, 'Spain' с индексом 6 и 'France' с индексом 7. Добавление элементов произведите с помощью метода push().
@@ -19,51 +19,51 @@ let countries = ['Austria', 'Belgium', 'Netherlands', 'Czechia', 'Croatia'];
 countries.push('Italy');
 countries.push('Spain');
 countries.push('France');
-console.log(countries);
+console.log('Задание 4', countries);
 
 //Задание 5
 //У вас есть массив countries, содержащий названия нескольких стран. Используя метод массива, выведите в консоль последний элемент массива. Для этого можно использовать свойство length и индексацию элементов.
 //Обратите внимание, в JavaScript индексация элементов в массиве начинается с 0.
-console.log(countries[countries.length -1]);
+console.log('Задание 5', countries[countries.length -1]);
 
 //Задание 6
 //У вас есть массив countries, содержащий названия нескольких стран. Используя метод массива shift, извлеките первый элемент массива и выведите его в консоль. Обратите внимание, что сам массив должен сохраниться в переменной.
 const newCountry = countries.shift();
-console.log(newCountry);
-console.log(countries);
+console.log('Задание 6', newCountry);
+
 
 //Задание 7
 //У вас есть массив numbers, содержащий несколько чисел. Используя метод массива map, создайте новый массив squaredNumbers, в котором каждый элемент будет являться квадратом соответствующего элемента из массива numbers. Выведите полученный массив squaredNumbers в консоль.
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const squaredNumbers = numbers.map((num => num*num))
-console.log(squaredNumbers);
+console.log('Задание 7',squaredNumbers);
 
 //Задание 8
 //У вас есть массив colors, содержащий названия различных цветов. Используя метод массива forEach, выведите каждый элемент массива в консоль.
 let colors = ['red', 'green', 'blue', 'yellow', 'orange'];
 colors.forEach((color) =>
-    console.log(color));
+    console.log('Задание 8', color));
 
 //Задание 9
 //Добавьте в массив russianCities значения 'Санкт-Петербург' с индексом 0, 'Москва' с индексом 1 и 'Екатеринбург' с индексом 2. Добавление элементов выполните с помощью оператора spread.
 let russianCities = ['Казань', 'Нижний Новгород'];
 const newCities = ['Санкт-Петербург', 'Москва', 'Екатеринбург' ];
 russianCities = ['Казань', 'Нижний Новгород', ...newCities];
-console.log(russianCities);
+console.log('Задание 9',russianCities);
 
 //Задание 10
 //Напишите функцию, которая вычисляет сумму первого (индекс 0) и последнего элемента массива numbers и выводит результат в консоль. При вычислении индекса последнего элемента используйте свойство length массива.
 //Обратите внимание, что массив numbers создан в задании 7.
 
 const countSum = (arr) => {
-    console.log(arr[0] + arr[arr.length -1]);
+    console.log('Задание 10',arr[0] + arr[arr.length -1]);
 }
 countSum(numbers);
 
 //Задание 11
 //У вас есть массив numbers, содержащий числа от 1 до 10. Напишите функцию filterEvenNumbers, которая принимает этот массив в качестве аргумента и выводт в консоль новый массив, содержащий только чётные числа из исходного массива, с использованием метода filter().
 const filterEvenNumbers = (arr) => {
-    console.log(arr.filter(el => el % 2 == 0
+    console.log('Задание 11', arr.filter(el => el % 2 == 0
         ))
 }
 filterEvenNumbers(numbers);
@@ -73,6 +73,75 @@ filterEvenNumbers(numbers);
 let randomNumbers = [72, 45, 19, 84, 37, 56, 91, 23, 68, 10, 98, 32];
 const randomArr = [...randomNumbers];
 const sortAndPrint = (arr) => {
-    console.log(arr.sort());
+    console.log('Задание 12', arr.sort());
 }
 sortAndPrint(randomArr);
+
+// students
+//1. Создайте пустой массив с именем `grades` и заполните массив случайными оценками от 1 до 100 для 12 студентов. Для генерации случайных оценок, используйте функцию `Math.random()`.
+// 2. Рассчитайте и выведите средний балл студентов, используя методы массивов.
+// 3. Найдите и выведите максимальный балл среди студентов, используя соответствующий метод массива.
+// 4. Найдите и выведите минимальный балл среди студентов, используя соответствующий метод массива.
+// 5. Посчитайте и выведите количество студентов, получивших положительную оценку (балл выше или равен 60). Используйте метод массива, который фильтрует оценки и оставляет только те, которые соответствуют заданному условию. Затем посчитайте количество оставшихся оценок и выведите результат.
+// 6. Посчитайте и выведите количество студентов, получивших отрицательную оценку (балл ниже 60). Используйте аналогичный подход, как в предыдущем шаге.
+// 7. Преобразуйте числовые оценки в формат буквенных оценок A/B/C/D/E, используя следующие правила:
+//     - Если оценка находится в диапазоне от 80 до 100, преобразуйте её в "A"
+//     - Если оценка находится в диапазоне от 60 до 79, преобразуйте её в "B"
+//     - Если оценка находится в диапазоне от 40 до 59, преобразуйте её в "C"
+//     - Если оценка находится в диапазоне от 20 до 39, преобразуйте её в "D"
+//     - Если оценка ниже 20, преобразуйте её в "E"
+
+// Выведите все найденные значения на экран.
+
+let grades = [];
+for (let i = 1; i <13; i++) {
+    grades.push(Math.round((Math.random() * 100)));
+    }
+    console.log('Массив с оценками', grades);
+
+const averageResult = Math.round((grades.reduce((sum, current) => sum + current, 0)) / 12);
+console.log('Средний балл', averageResult);
+
+function getMaxOfArray(numArray) {
+    return Math.max.apply(null, numArray);
+}
+console.log('Максимальный балл', getMaxOfArray(grades));
+
+const minResult = Math.min(...grades);
+console.log('Минимальный балл', minResult)
+
+const positiveFilter = grades.filter((grade) => grade >= 60);
+console.log('Количество студентов, получивших положительную оценку', positiveFilter.length);
+console.log('Положительные оценки студентов',positiveFilter);
+console.log('Количество оставшихся оценок', grades.length - positiveFilter.length)
+
+const negativeFilter = grades.filter((grade) => grade < 60);
+console.log('Количество студентов, получивших отрицательную  оценку', negativeFilter);
+console.log('Отрицательные оценки студентов',negativeFilter.length);
+console.log('Количество оставшихся оценок', grades.length - negativeFilter.length);
+
+const wordGrades = grades.map(function (item) {
+    if (item >= 80 && item<= 100) {
+        item = 'A';
+    }
+    if (item >= 60 && item <=79 ) {
+        item = 'B';
+    }
+    if (item >= 40 && item <=59) {
+        item = 'C';
+    }
+    if (item >= 20 && item <=39 ) {
+        item = 'D';
+    }
+    if (item < 20 ) {
+        item = 'E';
+    }
+    return item;
+});
+
+console.log('Массив буквенных оценок', wordGrades);
+
+
+
+
+
